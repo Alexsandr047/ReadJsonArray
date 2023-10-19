@@ -9,7 +9,6 @@ bool UReadJsonArraySubsystem::ReadJsonArray()
 	FString JsonString = "";	
 	Array.Empty();
 	FString JsonFilePath = FPaths::ProjectContentDir() + "/Jsons/JsonArray.json";
-	//FFileHelper::SaveStringToFile(JsonString,*JsonFilePath);
 	FFileHelper::LoadFileToString(JsonString,*JsonFilePath);
 	const TSharedRef<TJsonReader<TCHAR>> Reader = TJsonReaderFactory<TCHAR>::Create(JsonString);
 	TSharedPtr<FJsonValue> JsonValue;	
